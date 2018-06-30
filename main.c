@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #define MAX_1 50
 #define MAX_2 150
+typedef int bool;
+#define true 1
+#define false 0
 
-int possui(char entrada[], char chave[])
+
+bool possui(char entrada[], char chave[])
 {
     int i=0, resultado=0;
     int t1=0;
@@ -50,7 +54,7 @@ int possui(char entrada[], char chave[])
     return 0;
 }
 
-int comecaCom(char entrada[], char chave[])
+bool comecaCom(char entrada[], char chave[])
 {
     int t1=0;
     int resultado=0;
@@ -72,14 +76,14 @@ int comecaCom(char entrada[], char chave[])
     }
 
     if(resultado==t1){
-        return 1;
+        return true;
     }
 
-    return 0;
+    return false;
 }
 
 
-int terminaCom(char entrada[], char chave[])
+bool terminaCom(char entrada[], char chave[])
 {
     int t1=0;
     int t2=0;
@@ -107,10 +111,10 @@ int terminaCom(char entrada[], char chave[])
         }
     }
     if(resultado==t1){
-        return 1;
+        return true;
     }
 
-    return 0;
+    return false;
 }
 
 int main(void)
@@ -175,7 +179,7 @@ int main(void)
     {
         resultado1 = comecaCom(entrada,chave);
 
-        if(resultado1 == 1)
+        if(resultado1 == true)
         {
             puts("A entrada possui o prefixo buscado");
 
@@ -191,7 +195,7 @@ int main(void)
     {
         resultado2 = terminaCom(entrada,chave2);
 
-        if(resultado2 == 1)
+        if(resultado2 == true)
         {
             puts("A entrada possui o sufixo buscado");
 
@@ -206,7 +210,7 @@ int main(void)
     {
         resultado3 = possui(entrada,chave3);
 
-        if(resultado3 == 1)
+        if(resultado3 == true)
         {
             puts("A entrada possui a subpalavra digitada");
 
