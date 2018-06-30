@@ -8,7 +8,7 @@ As funções implementadas têm como objetivo realizar a busca por Prefixo, Sufi
 
 ## Funções
 
-* Na função "comecaCom" tem-se um vetor "entrada" representando a fita do autômato e um vetor "chave" sendo o prefixo a ser buscado, após percorrer a fita ele retorna o tamanho do resultado para a função principal onde é verificado se o tamanho da chave é o mesmo do resultado retornado pela função se for o mesmo significa que a entrava começa com o prefixo buscado.
+* Na função "comecaCom" tem-se um vetor "entrada" representando a fita do autômato e um vetor "chave" sendo o prefixo a ser buscado, após percorrer a fita ele retorna verdadeiro ou falso, se o tamanho da chave e o contador resultado forem iguais ou diferentes, para a função principal onde é verificado e exibido na tela.
 
 ![Exemplo "comecaCom" verdadeiro](/images/exemplo1.png)
 
@@ -20,7 +20,7 @@ As funções implementadas têm como objetivo realizar a busca por Prefixo, Sufi
 
 ![Exemplo "terminaCom" falso](/images/exemplo4.png)
 
-* Na função "possui" tem-se um vetor "entrada" representando a fita do autômato e um vetor "chave" sendo a subpalavra a ser buscada, após percorrer a fita ele retorna o contador resultado para função principal onde é comparado o tamanho armazenado no contador resultado e o tamanho da chave, como explicado acima sendo considerado como estado final do autômato, caso sejam iguais, indicam que possui subpalavra.
+* Na função "possui" tem-se um vetor "entrada" representando a fita do autômato e um vetor "chave" sendo a subpalavra a ser buscada, após percorrer a fita é comparado o contador resultado com o tamanho da chave, como explicado acima sendo considerado como estado final do autômato,retornando verdadeiro ou falso para função principal, onde é verificado e exibido na tela.
 
 ![Exemplo "possui" verdadeiro](/images/exemplo5.png)
 
