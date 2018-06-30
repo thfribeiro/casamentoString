@@ -35,7 +35,7 @@ int possui(char entrada[], char chave[])
                 resultado++;
                 if(resultado==t2)
                 {
-                    return resultado;
+                    return 1;
                 }
             }
             else
@@ -47,7 +47,7 @@ int possui(char entrada[], char chave[])
     }
     while((t1-n)>=t2);
 
-    return resultado;
+    return 0;
 }
 
 int comecaCom(char entrada[], char chave[])
@@ -71,7 +71,11 @@ int comecaCom(char entrada[], char chave[])
         }
     }
 
-    return resultado;
+    if(resultado==t1){
+        return 1;
+    }
+
+    return 0;
 }
 
 
@@ -102,8 +106,11 @@ int terminaCom(char entrada[], char chave[])
             resultado+=1;
         }
     }
+    if(resultado==t1){
+        return 1;
+    }
 
-    return resultado;
+    return 0;
 }
 
 int main(void)
@@ -168,7 +175,7 @@ int main(void)
     {
         resultado1 = comecaCom(entrada,chave);
 
-        if(resultado1 == t1)
+        if(resultado1 == 1)
         {
             puts("A entrada possui o prefixo buscado");
 
@@ -184,7 +191,7 @@ int main(void)
     {
         resultado2 = terminaCom(entrada,chave2);
 
-        if(resultado2 == t2)
+        if(resultado2 == 1)
         {
             puts("A entrada possui o sufixo buscado");
 
@@ -199,7 +206,7 @@ int main(void)
     {
         resultado3 = possui(entrada,chave3);
 
-        if(resultado3 == t3)
+        if(resultado3 == 1)
         {
             puts("A entrada possui a subpalavra digitada");
 
